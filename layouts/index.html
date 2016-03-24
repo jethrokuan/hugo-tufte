@@ -1,0 +1,37 @@
+{{ partial "header.html" . }}
+<body>
+  <div id="layout">
+    <article>
+      {{ partial "brand.html" . }}
+      {{ range .Site.Pages }}
+      <section>
+        <section>
+          <h1 class="content-title">
+            {{ if .IsNode }}
+            <a href="{{ .Permalink }}">{{ .Title}}</a>
+            {{ else }}
+            <a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} :: Draft {{end}}</a>
+            {{ end }}
+          </h1>
+          <span class="content-meta">
+	          <span id="date">{{ .Date.Format "Jan 2, 2006" }}</span><br/>
+	          <span id="read-time">{{ .ReadingTime }} min read</span>
+	          <br>
+	          {{ range .Params.categories }}
+	          <span class="tag">
+              <i class="icon-price-tags"></i><a	href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+            </span>
+	          {{ end }}
+          </span>
+        </section>
+      <p>{{ .Summary }}</p>
+      {{ if .Truncated }}
+      <p><a href="{{ .RelPermalink  }}">Read On &rarr;</a></p>
+      {{ end }}
+      {{ end }}
+      {{ partial "footer.html" . }}
+      </article>
+    </section>
+  </div>
+</body>
+</html>

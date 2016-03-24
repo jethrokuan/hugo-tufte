@@ -1,0 +1,11 @@
+<footer class="page-footer">
+		<hr>
+	  <p>
+      {{ with .Site.Params.copyright }}
+      {{ . | safeHTML }}
+      {{ else }}
+      &copy; {{.Now.Format "2006"}}        
+      Jethro Kuan All rights reserved.
+      {{end}}
+    </p>
+</footer>
