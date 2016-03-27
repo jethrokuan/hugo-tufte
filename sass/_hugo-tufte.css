@@ -28,7 +28,7 @@ pre code {
     font-size: 1.2rem;
     padding-left: 2.5%;
     display: block;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 /*@media (max-width: 760px) {

@@ -9,3 +9,8 @@
       {{end}}
     </p>
 </footer>
+
+{{ if or .Params.code .IsHome }}
+<script type="text/javascript" src="/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+{{ end }}
