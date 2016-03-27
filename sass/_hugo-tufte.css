@@ -35,12 +35,12 @@ figure pre code {
     width: 100%;
 }
 
-/*@media (max-width: 760px) {
+@media (max-width: 760px) {
     pre code {
         width: 90%;
         padding: 0;
     }
- }*/
+}
 
 /* ------------------------------------------------------------------------ */
 /* Brand details, such as a sidebar or top display. */
