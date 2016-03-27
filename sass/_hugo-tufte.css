@@ -25,10 +25,14 @@ code {
 
 pre code {
     width: 52.5%;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     padding-left: 2.5%;
     display: block;
     overflow-x: hidden;
+}
+
+figure pre code {
+    width: 100%;
 }
 
 /*@media (max-width: 760px) {
