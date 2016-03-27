@@ -1,5 +1,8 @@
 #brand h1 {
     margin-bottom: 8px;
+    @media (max-width: 760px) {
+        margin-top: 1rem;
+    }
 }
 
 .social {
